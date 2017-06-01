@@ -3,14 +3,14 @@
 ## Authentication
 
 ```shell
-curl "http://feed.accern.com/v3/alphas?token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?token=TOKEN"
 ```
 
 ```ruby
 require 'uri'
 require 'net/http'
 
-url = URI("http://feed.accern.com/v3/alphas?token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?token=TOKEN")
 http = Net::HTTP.new(url.host, url.port)
 request = Net::HTTP::Get.new(url)
 response = http.request(request)
@@ -20,7 +20,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "http://feed.accern.com/v3/alphas?token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?token=TOKEN"
 req = requests.get(url)
 text_response = req.text # read response as Text
 print(text_response)
@@ -32,7 +32,7 @@ print(json_response)
 ```r
 if (!require("jsonlite")) install.packages("jsonlite")
 
-url <- "http://feed.accern.com/v3/alphas?token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?token=TOKEN"
 response <- fromJSON(url)
 print(response)
 ```
@@ -43,19 +43,19 @@ To authenticate provide your authentication token in the url. We provide the aut
 
 ## Feed
 ```shell
-curl "http://feed.accern.com/v3/alphas?token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas?token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas?token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas?token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?token=TOKEN"
 ```
 
 > The above url returns the most recent 100 documents.
@@ -63,7 +63,7 @@ url <- "http://feed.accern.com/v3/alphas?token=TOKEN"
 ```json
 <%= partial 'includes/feed/regular_response.json' %>
 ```
-`GET http://feed.accern.com/v3/alphas?token=TOKEN`
+`GET https://feed.accern.com/v3/alphas?token=TOKEN`
 
 By default this request will return the most recent 100 documents.
 
@@ -72,91 +72,91 @@ By default this request will return the most recent 100 documents.
 > Filter by last_id
 
 ```shell
-curl "http://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
 ```
 
 > Filter by index
 
 ```shell
-curl "http://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas?index=sp500&token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
 ```
 
 > Filter by multiple indexes
 
 ```shell
-curl "http://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
 ```
 
 > Filter by ticker
 
 ```shell
-curl "http://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
 ```
 
 > Filter by multiple tickers
 
 ```shell
-curl "http://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
+curl "https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
+url = "https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
 ```
 
 Parameter | Description
@@ -179,19 +179,19 @@ DOW 30				| dow30
 ## File Format
 
 ```shell
-curl "http://feed.accern.com/v3/alphas.csv?token=TOKEN"
+curl "https://feed.accern.com/v3/alphas.csv?token=TOKEN"
 ```
 
 ```ruby
-url = URI("http://feed.accern.com/v3/alphas.csv?token=TOKEN")
+url = URI("https://feed.accern.com/v3/alphas.csv?token=TOKEN")
 ```
 
 ```python
-url = "http://feed.accern.com/v3/alphas.csv?token=TOKEN"
+url = "https://feed.accern.com/v3/alphas.csv?token=TOKEN"
 ```
 
 ```R
-url <- "http://feed.accern.com/v3/alphas.csv?token=TOKEN"
+url <- "https://feed.accern.com/v3/alphas.csv?token=TOKEN"
 ```
 
 By default the response from the API feed is in JSON format. But if you append .csv you will get the data in CSV format.
