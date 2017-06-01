@@ -123,18 +123,18 @@
           <h1 id="accern-api">Accern API</h1>
 
 <h2 id="authentication">Authentication</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?token=TOKEN"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?token=TOKEN"</span>
 </code></pre><pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="p">)</span>
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?token=TOKEN"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?token=TOKEN"</span>
 <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">text_response</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">text</span> <span class="c"># read response as Text</span>
 <span class="k">print</span><span class="p">(</span><span class="n">text_response</span><span class="p">)</span>
@@ -143,7 +143,7 @@
 <span class="k">print</span><span class="p">(</span><span class="n">json_response</span><span class="p">)</span>
 </code></pre><pre class="highlight r"><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">require</span><span class="p">(</span><span class="s2">"jsonlite"</span><span class="p">))</span><span class="w"> </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"jsonlite"</span><span class="p">)</span><span class="w">
 
-</span><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="w">
+</span><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="w">
 </span><span class="n">response</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fromJSON</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="w">
 </span></code></pre>
@@ -154,10 +154,10 @@
 <p>To authenticate provide your authentication token in the url. We provide the authentication token in your welcome email.</p>
 
 <h2 id="feed">Feed</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?token=TOKEN"</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>The above url returns the most recent 100 documents.</p>
@@ -277,7 +277,7 @@
 </span><span class="p">]</span><span class="w">
 
 </span></code></pre>
-<p><code class="prettyprint">GET http://feed.accern.com/v3/alphas?token=TOKEN</code></p>
+<p><code class="prettyprint">GET https://feed.accern.com/v3/alphas?token=TOKEN</code></p>
 
 <p>By default this request will return the most recent 100 documents.</p>
 
@@ -286,42 +286,42 @@
 <blockquote>
 <p>Filter by last_id</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?last_id=1774184&amp;token=TOKEN"</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Filter by index</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?index=sp500&amp;token=TOKEN"</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Filter by multiple indexes</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?index=sp500,dow30&amp;token=TOKEN"</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Filter by ticker</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?ticker=amzn&amp;token=TOKEN"</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Filter by multiple tickers</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas?ticker=aapl,amzn&amp;token=TOKEN"</span><span class="w">
 </span></code></pre>
 <table><thead>
 <tr>
@@ -378,10 +378,10 @@
 </tbody></table>
 
 <h2 id="file-format">File Format</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://feed.accern.com/v3/alphas.csv?token=TOKEN"</span>
-</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"http://feed.accern.com/v3/alphas.csv?token=TOKEN"</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"http://feed.accern.com/v3/alphas.csv?token=TOKEN"</span>
-</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://feed.accern.com/v3/alphas.csv?token=TOKEN"</span><span class="w">
+<pre class="highlight shell"><code>curl <span class="s2">"https://feed.accern.com/v3/alphas.csv?token=TOKEN"</span>
+</code></pre><pre class="highlight ruby"><code><span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://feed.accern.com/v3/alphas.csv?token=TOKEN"</span><span class="p">)</span>
+</code></pre><pre class="highlight python"><code><span class="n">url</span> <span class="o">=</span> <span class="s">"https://feed.accern.com/v3/alphas.csv?token=TOKEN"</span>
+</code></pre><pre class="highlight r"><code><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://feed.accern.com/v3/alphas.csv?token=TOKEN"</span><span class="w">
 </span></code></pre>
 <p>By default the response from the API feed is in JSON format. But if you append .csv you will get the data in CSV format.</p>
 
