@@ -1,4 +1,5 @@
-##Accern Rank(overall_source_rank)
+##Source Rank(overall_source_rank)
+
 **What is it?** Accern Rank identifies if the information from a source is posted promptly and if that information will go viral (similar articles published by others).
 **Rank 1** is lowest and **Rank 10** is highest.
 **In other words,** it lets you know which sources usually are among the first to publish articles on a new story and also informs if they have a knack at posting on stories that become wide spread.
@@ -24,7 +25,7 @@ It checks in the past, which sources posted faster in comparison to other source
 - **Overall Author Rank (Low-Mid)** - *John Paul*<sup>*</sup> releases stories on StreetInsider first, but his stories don’t get republished by any other authors.
 
 <sup>*</sup>
-##Accern Rank(event_source_rank)
+##Author Rank(event_source_rank)
 **What is it?** Ranks are based on the same Accern Rank model which tries to predict promptness and ability to post republished stories.
 **Rank 1** is lowest and **Rank 10** is highest.
 **event_source_rank/event_author_rank** is more precise.
@@ -43,4 +44,4 @@ It would be prudent to the client to notice that sources will have varied ranks 
 
 - **Event Source Rank (High)** - StreetInsider releases lawsuit stories first, and their lawsuit stories get republished by many other sources.
 
-- **Event Author Rank (Low-Mid)** - *John Paul*<sup>*</sup> releases lawsuit stories on StreetInsider late, but his stories are republished by some authors.
+<img src="images/cuttykitty.jpg" alt="IMAGE ALT TEXT HERE" width="100%" />
