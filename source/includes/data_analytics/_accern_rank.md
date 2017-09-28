@@ -7,7 +7,7 @@
 
 * **overall_source_rank** - determines if the SOURCE is *reliable* at releasing trending stories. i.e. reliable indicating ability to post early and trending indicating potential of wide spread stories.
 
-* **overall_author_rank** - determines if the AUTHOR is *reliable* at releasing trending stories. 
+* **overall_author_rank** - determines if the AUTHOR is *reliable* at releasing trending stories.
 
 <aside class="notice">
 Difference between source and author? Source is the website. Ex NYT or Bloomberg. Author is the writer within the organization.
@@ -27,20 +27,20 @@ It checks in the past, which sources posted faster in comparison to other source
 ##Accern Rank(event_source_rank)
 **What is it?** Ranks are based on the same Accern Rank model which tries to predict promptness and ability to post republished stories.
 **Rank 1** is lowest and **Rank 10** is highest.
-**event_source_rank/event_author_rank** is more precise. 
+**event_source_rank/event_author_rank** is more precise.
 For ex. Tumblr posts rumors faster than others. Bloomberg posts financial docs faster than others.
 It would be prudent to the client to notice that sources will have varied ranks for different events.
 
 **Quick Definition:**
 
-* **event_source_rank** - determines if the SOURCE is *reliable* at releasing articles associated with a financial event. 
+* **event_source_rank** - determines if the SOURCE is *reliable* at releasing articles associated with a financial event.
 
-* **event_author_rank** - determines if the AUTHOR is *reliable* at releasing articles associated with a financial event.. 
+* **event_author_rank** - determines if the AUTHOR is *reliable* at releasing articles associated with a financial event..
 
 **How is it created?** The ranking model is the same. Ranks are calculated by filtering based on financial events.
 
 **Examples**
- 
+
 - **Event Source Rank (High)** - StreetInsider releases lawsuit stories first, and their lawsuit stories get republished by many other sources.
 
 - **Event Author Rank (Low-Mid)** - *John Paul*<sup>*</sup> releases lawsuit stories on StreetInsider late, but his stories are republished by some authors.
