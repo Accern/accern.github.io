@@ -3,11 +3,11 @@
 
 **Quick Definition:** value from 0 to 1, is based on the percentage of robo generated articles from the source.
 
-**How is it created?** Based on robo story clustering model, we generated an overall robo score for all sources we cover.
+**How is it created?** Based on robo article clustering model, we generated an overall robo score for all sources we cover.
 
 3-Step Process for Computing Source Robo Score:
 
-1. A story clustering model looks into historical data (metadata of unique stories) with NLP metrics, and determine how similar stories share in structure and content.
+1. A robo article clustering model looks into historical data (metadata of unique articles) with NLP metrics, and determine how similar articles share in structure and content.
 
 2. Human curation upon the clusters will downgrade the robo score if the the content is from companies or government department's official website.
 
