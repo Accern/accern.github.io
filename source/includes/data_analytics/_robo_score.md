@@ -29,4 +29,4 @@ The two articles share the information of earnings call for Costco and Amazon. R
 
 -- *Federal Reserve Board announces termination of enforcement action with Farmers and Merchants Bancshares, Inc.*
 
-[Board of Governors of Federal Reserve System](http://www.federalreserve.gov) announces termination of enforcement action in a similar form of title and content. Similar cases share with company official earning report, SEC filings, etc. Human curation will lower the score for these specific clusters.
+**Board of Governors of Federal Reserve System** announces termination of enforcement action in a similar form of title and content. Similar cases share with company official earning report, SEC filings, etc. Human curation will lower the score for these specific clusters.
