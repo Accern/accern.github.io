@@ -8,7 +8,7 @@ language_tabs:
   - r
 
 toc_footers:
-  - <a href='/'>Link for v4.0 Documentation</a>
+  - <a href='/'>Link for v3.0 Documentation</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -18,5 +18,5 @@ includes:
 
 search: true
 
-version: v3.0
+version: v4.0 Beta
 ---
