@@ -1,49 +1,106 @@
 ##Source Rank
 
-Accern analyzes 300 million+ sources in favor of how promptly they cover stories and if their information will go viral (similar articles published by others). With Accern Source Rank, users can have the analytics for `timeliness` and `republish_rate`.
+**What is it?** Accern analyzes 300 million sources in favor of how promptly they cover stories and if their information will go viral (similar articles published by others). With Accern Source Rank, users can have the analytics for `source_timeliness` and `source_republish`.
 
 **Quick Definition:**
 
-* **Timeliness** - determines how timely the source is at releasing articles.
+* **source_timeliness.overall** - value from 0 to 100, determines how timely the source is at releasing articles.
 
-<img src="images/source_timeliness.jpg" alt="source_timeliness" width="100%" />
+<img src="images/source_timeliness.jpg" alt="source_timeliness" width="600px" />
 
 The source timeliness score is calculated for each source across all the stories which have articles from it, and are weighted by the story size, giving more credibility to trending stories and decreasing the importance of small stories.
 
-* **Republish Rate** - determines how much the source is at releasing stories.
+* **source_timeliness.on_entities** determines the timeliness of the source to cover mentioned companies.
 
+* **source_timeliness.on_events** determines the timeliness of the source to cover mentioned events.
 
-**How is it created?** A graphical model takes into account historical data (past articles), how certain news appeared in the past and how the distribution of articles within a story looked like.
-It checks in the past, which sources posted faster in comparison to other sources which then posted contextually similar articles.
+* **source_republish.overall** - value from 0 to 100, determines how likely that more similar articles will come in a short period of time after an article is published from a specific source.
+
+* **source_republish.on_entities** determines regarding to the mentioned companies, how likely more article will cover the similar story after the selected source.
+
+* **source_republish.on_events** determines regarding to the mentioned events, how likely more article will cover the similar story after the selected source.
 
 **Examples**
 
-- **Overall Source Rank (High)** - StreetInsider releases stories first, and their stories get republished by many other sources.
 
-- **Overall Author Rank (Low-Mid)** - *John Paul* releases stories on StreetInsider first, but his stories don’t get republished by any other authors.
+- **Overall Source Timeliness Score** - If Source A has overall timeliness score higher than Source B, Source A publishes article earlier than Source B in general .
 
-## Author Rank(author_rank)
-**What is it?** Ranks are based on the same Accern Rank model which tries to predict promptness and ability to post republished stories.
-**Rank 1** is lowest and **Rank 10** is highest.
-**event_source_rank/event_author_rank** is more precise.
-For ex. Tumblr posts rumors faster than others. Bloomberg posts financial docs faster than others.
-It would be prudent to the client to notice that sources will have varied ranks for different events.
+- **Overall Source Republish Score** - If Source A has overall republish score higher than Source B, a new article from Source A will in general have more follow up articles than Source B in general.
+
+- **Source Timeliness Score on Company Earnings** - If Source A has timeliness score on Company Earnings higher than Source B, Source A reports faster about Company Earings than Source B.
+
+```json
+{
+    "source": "***",
+    "source_timeliness": {
+        "overall": 41,
+        "on_entities": [
+            {
+                "key": "AAPL",
+                "value": 43
+            },
+            {
+                "key": "AMZN",
+                "value": 32
+            }
+        ],
+        "on_events": [
+            {
+                "key": "Acquisition",
+                "value": 96
+            },
+            {
+                "key": "Financial Ratings",
+                "value": 16
+            }
+        ]
+    },
+    "source_republish": {
+        "overall": 23,
+        "on_entities": [
+            {
+                "key": "AAPL",
+                "value": 10
+            },
+            {
+                "key": "AMZN",
+                "value": 1
+            }
+        ],
+        "on_events": [
+            {
+                "key": "Acquisition",
+                "value": 14
+            },
+            {
+                "key": "Financial Ratings",
+                "value": 20
+            }
+        ]
+    },
+}
+```
+
+- **Metric Conbination** Consider the right-side object, and a new article from a specific source reporting a recent acquisition from Apple, we see that for this particular source, it generally report story about `AAPL` and `Acquisition` very timely comparing to the all the events and companies overall.
+
+
+## Author Rank
+**What is it?** Ranks are based on the same Source Rank model which tries to predict promptness and ability to post republishable stories.
 
 <aside class="notice">
-Difference between source and author? Source is the website. Ex NYT or Bloomberg. Author is the writer within the organization.
-In the below examples we use fictional name John Paul.
+Difference between source and author? Source is the website like New York Times or Bloomberg. Author is the writer within the websites like Twitter or Tumblir.
 </aside>
 
 **Quick Definition:**
 
-* **event_source_rank** - determines if the SOURCE is *reliable* at releasing articles associated with a financial event.
+* **author_timeliness.overall** - value from 0 to 100, determines the promptness the author covers articles.
 
-* **event_author_rank** - determines if the AUTHOR is *reliable* at releasing articles associated with a financial event..
+* **author_timeliness.on_entities** determines the timeliness of the author to cover mentioned companies.
 
-**How is it created?** The ranking model is the same. Ranks are calculated by filtering based on financial events.
+* **author_timeliness.on_events** determines the timeliness of the author to cover mentioned events.
 
-**Examples**
+* **author_republish.overall** - value from 0 to 100, determines how likely that more similar articles will come in a short period of time after an article is published from a specific author.
 
-- **Event Source Rank (High)** - StreetInsider releases lawsuit stories first, and their lawsuit stories get republished by many other sources.
+* **author_republish.on_entities** determines regarding to the mentioned companies, how likely more article will cover the similar story after the selected author.
 
-<img src="images/cuttykitty.jpg" alt="IMAGE ALT TEXT HERE" width="100%" />
+* **author_republish.on_events** determines regarding to the mentioned events, how likely more article will cover the similar story after the selected author.

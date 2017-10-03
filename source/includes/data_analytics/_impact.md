@@ -1,4 +1,4 @@
-##Impact (_overall)
+##Event Impact (event_impact_score.overall)
 **What is it?** When a certain type of story appears in media, calculate the probability that the stock price of the company moves up/down by more than 1% by EOD.
 Overall Impact score checks how an event like **Company Earnings** generally has high impact compared to other events.
 Overall Impact Score is an average across all the **entity_impact_scores** for different companies.
@@ -12,8 +12,8 @@ In brief, by overlaying 3+ years of financial events data with stock prices mark
 
 - Event Impact Score Overall (High) - In the past 3 years, whenever a lawsuit happened, it affected the stock prices of companies in general by 1% or more EOD.
 
-##Impact (_on_entities)
-**What is it?** Entity Impact Score is more precise as it it returns a probability that particular event will affect SPECIFIC equities.
+##Event Impact (event_impact_score.on_entities)
+**What is it?** Entity Impact Score is more precise as it returns a probability that particular event will affect SPECIFIC equities.
 For example, **event_impact_score_on_entities** of 90 for *Apple and 'Mergers & Acquisition' event* conveys this sort of story/theme moved the market before in the past and there is a high likelihood now as well.
 Also, this event can vary in impact score for different companies.
 
@@ -22,8 +22,6 @@ Also, this event can vary in impact score for different companies.
 **How is it created?** Using the same procedure to calculate overall impact score of an event, this process filters based on every entity and calculates respective probabilities.
 
 **Examples**
-
-> Sample Snippet
 
 ```json
 {
