@@ -81,7 +81,7 @@ The source timeliness score is calculated for each source across all the stories
 }
 ```
 
-- **Metric Conbination** Consider the right-side object, and a new article from a specific source reporting a recent acquisition from Apple, we see that for this particular source, it generally report story about `AAPL` and `Acquisition` very timely comparing to the all the events and companies overall.
+- **Metric Combination** Consider the right-side object, and a new article from a specific source reporting a recent acquisition from Apple, we see that for this particular source, it generally report story about `AAPL` and `Acquisition` very timely comparing to the all the events and companies overall.
 
 
 ## Author Rank

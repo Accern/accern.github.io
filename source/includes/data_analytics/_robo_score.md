@@ -3,7 +3,7 @@
 
 **Quick Definition:** value from 0 to 1, is based on the percentage of robo generated articles from the source.
 
-**How is it created?** Based on robo story clustering model, we generated an overall robo score for 300 million source we cover.
+**How is it created?** Based on robo story clustering model, we generated an overall robo score for all sources we cover.
 
 3-Step Process for Computing Source Robo Score:
 
