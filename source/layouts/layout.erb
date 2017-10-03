@@ -42,7 +42,8 @@ under the License.
       </span>
     </a>
     <div class="tocify-wrapper">
-      <%= image_tag "logo.png", width: 185 %>
+      <%= image_tag "logo_dark.png", :style => "width: 185px; padding-top: 20px; padding-bottom: 15px;"%>
+      <span class="version"> <%= current_page.data.version %></span>
       <% if language_tabs.any? %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>

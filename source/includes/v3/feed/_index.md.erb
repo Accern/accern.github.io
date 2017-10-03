@@ -1,0 +1,262 @@
+# Accern API
+
+## Authentication
+
+```shell
+curl "https://feed.accern.com/v3/alphas?token=TOKEN"
+```
+
+```ruby
+require 'uri'
+require 'net/http'
+
+url = URI("https://feed.accern.com/v3/alphas?token=TOKEN")
+http = Net::HTTP.new(url.host, url.port)
+request = Net::HTTP::Get.new(url)
+response = http.request(request)
+puts response.read_body
+```
+
+```python
+import requests
+
+url = "https://feed.accern.com/v3/alphas?token=TOKEN"
+req = requests.get(url)
+text_response = req.text # read response as Text
+print(text_response)
+
+json_response = req.json() # read response as JSON
+print(json_response)
+```
+
+```r
+if (!require("jsonlite")) install.packages("jsonlite")
+
+url <- "https://feed.accern.com/v3/alphas?token=TOKEN"
+response <- fromJSON(url)
+print(response)
+```
+
+> Make sure to replace TOKEN above
+
+To authenticate provide your authentication token in the url. We provide the authentication token in your welcome email.
+
+## Feed
+```shell
+curl "https://feed.accern.com/v3/alphas?token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas?token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas?token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas?token=TOKEN"
+```
+
+> The above url returns the most recent 100 documents.
+
+```json
+<%= partial 'includes/v3/feed/regular_response.json' %>
+```
+`GET https://feed.accern.com/v3/alphas?token=TOKEN`
+
+By default this request will return the most recent 100 documents.
+
+## Filtering
+
+> Filter by last_id
+
+```shell
+curl "https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas?last_id=1774184&token=TOKEN"
+```
+
+> Filter by index
+
+```shell
+curl "https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas?index=sp500&token=TOKEN"
+```
+
+> Filter by multiple indexes
+
+```shell
+curl "https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas?index=sp500,dow30&token=TOKEN"
+```
+
+> Filter by ticker
+
+```shell
+curl "https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas?ticker=amzn&token=TOKEN"
+```
+
+> Filter by multiple tickers
+
+```shell
+curl "https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas?ticker=aapl,amzn&token=TOKEN"
+```
+
+Parameter | Description
+-----------| ------------
+last_id	      | Returns the latest 100 documents that came after the provided id.  Used to prevent duplicates while keeping in sync (see [streaming](#streaming) section).
+index         | Filters documents by the index, see below table for supported indexes. To filter by multiple indexes pass a comma separated list of indexes.
+ticker         | Filters documents by ticker. To filter by multiple tickers pass a comma separated list of tickers.
+
+### Allowed index values
+
+index					 | expected query string value
+-----------------|----------------------
+S&P 500				| sp500
+Russell 1000		| russell1000
+Russell 3000		| russell3000
+Wilshire 5000		| wilshire5000
+Barron's 400		| barrons400
+DOW 30				| dow30
+
+## File Format
+
+```shell
+curl "https://feed.accern.com/v3/alphas.csv?token=TOKEN"
+```
+
+```ruby
+url = URI("https://feed.accern.com/v3/alphas.csv?token=TOKEN")
+```
+
+```python
+url = "https://feed.accern.com/v3/alphas.csv?token=TOKEN"
+```
+
+```R
+url <- "https://feed.accern.com/v3/alphas.csv?token=TOKEN"
+```
+
+By default the response from the API feed is in JSON format. But if you append .csv you will get the data in CSV format.
+
+CSV Columns                |
+---------------------------|
+id                         |
+article_id                 |
+story_id                   |
+harvested_at               |
+entities_name_1            |
+entities_ticker_1          |
+entities_global_id_1       |
+entities_entity_id_1       |
+entities_type_1            |
+entities_exchange_1        |
+entities_sector_1          |
+entities_industry_1        |
+entities_country_1         |
+entities_region_1          |
+entities_index_1           |
+entities_competitors_1     |
+entities_name_2            |
+entities_ticker_2          |
+entities_global_id_2       |
+entities_entity_id_2       |
+entities_type_2            |
+entities_exchange_2        |
+entities_sector_2          |
+entities_industry_2        |
+entities_country_2         |
+entities_region_2          |
+entities_index_2           |
+entities_competitors_2     |
+event_groups_group_1       |
+event_groups_type_1        |
+event_groups_group_2       |
+event_groups_type_2        |
+story_sentiment            |
+story_saturation           |
+story_volume               |
+first_mention              |
+article_type               |
+article_sentiment          |
+overall_source_rank        |
+event_source_rank_1        |
+event_source_rank_2        |
+overall_author_rank        |
+event_author_rank_1        |
+event_author_rank_2        |
+event_impact_score_overall |
+event_impact_score_entity_1|
+event_impact_score_entity_2|
+event_summary_group        |
+event_summary_theme        |
+event_summary_topic        |
+event_summary_action       |
+event_summary_sub-theme    |
+event_summary_acting_party |
+article_url                |
+
+## Streaming
+
+To stay in sync with the API you make a request with `last_id=[lastest document id]` then grab the id of the latest document that comes back and repeat. We packaged this logic up in our Accern gem, to install follow the instructions on the [repo](https://github.com/accern/accern).
+
+## Backfill
+
+The API allows you to access data going back 30 days, anything older we provide via other means. To start from 30 days ago and move forward you have to provide `last_id=0`. Then continue to hit the API while setting the `last_id` query string parameter.
