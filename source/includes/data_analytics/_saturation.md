@@ -2,7 +2,6 @@
 
 **What is it?** The online exposure of the story i.e. have a lot of people seen this story/information already?
 This is one of the useful metrics possible thanks to [story classification](#story-classification).
-**Note:** Twitter tweets takes into account the number of followers, retweets, and other metrics that twitter user has.
 
 **Quick Definition:** gauge the current potential exposure of a story
 
@@ -14,15 +13,15 @@ This is one of the useful metrics possible thanks to [story classification](#sto
 We accumulate total web traffic based on all related articles per story
 
 - Step 2: average web traffic per story
-We look back at all similar stories’ total web traffic and take an average per story 
+We look back at all similar stories’ total web traffic and take an average per story
 
 - Step 3: segment average story web traffic
-We segment the average story web traffic into low, mid, and high saturation 
+We segment the average story web traffic into low, mid, and high saturation
 
 **Examples**
- 
+
 - Saturation (High) - story published on 100+ websites
- 
+
 - Saturation (High) - story published on two major newswires
 
 - Saturation (Low) - story published on one medium-traffic website

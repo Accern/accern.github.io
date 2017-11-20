@@ -120,9 +120,9 @@ Table illustrates all the attributes in a single object *(article)* of the Accer
 Attributes | Type | Description
 -----------|------|-------------
 **id** | integer | unique id for feed (1 or greater)
-**article_id.$oid** | string |  unique id per article 
+**article_id.$oid** | string |  unique id per article
 **article_sentiment** | decimal | determines if article was [written positively/negatively](#sentiment-article_sentiment) (-1.000 - 1.000)
-**article_type** | string | determines the source of an information (ex. blog, article, tweet)
+**article_type** | string | determines the source of an information (ex. blog, article)
 **article_url** | url string | original link to article
 **entities** | list | List of associated equities objects that are identified for this article
 **entities_name** | string | name of the company (8,000+ U.S. public equities)

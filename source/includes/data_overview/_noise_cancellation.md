@@ -1,7 +1,7 @@
 ##Noise Cancellation
 Accern processes millions of articles/day of which a significant amount ends up as spam/ads/coupons/etc.
 To tackle this issue, Accern has optimized it's noise detection algorithms over the years.
-This noise cancellation mechanism takes around 150M+ articles (tweets, articles, blogs, etc.) every day and gives out around 25k articles at the end.
+This noise cancellation mechanism takes around 150M+ articles (articles, blogs, etc.) every day and gives out around 25k articles at the end.
 
 **Proprietary Pattern Recognition Spam Detector**
 

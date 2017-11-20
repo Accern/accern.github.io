@@ -1,4 +1,4 @@
-##Data Coverage
+## Data Coverage
 Brief elaboration on what kind of data and where it comes from.
 Table of average daily statistics regarding the data processing pipeline.
 
@@ -9,7 +9,6 @@ Accern acquires information from many types of online sources.
 * Public News Websites
 * Public Blogs
 * Press Releases
-* Twitter
 * Financial Documents ex. SEC Filings
 * Other Social Media ex. Tumblr
 
@@ -20,8 +19,7 @@ They include our own, in-house web scrapers and data obtained via partnered data
 
 * **Data Providers:**
 Majority of our data comes through our data providers.
-Currently monitoring around 300million+ sources (websites). 
-**NOTE:** *Twitter counts as a single source.*
+Currently monitoring around 300million+ sources (websites).
 
 * **Proprietary Scrapers:**
 Accern has proprietary crawlers that monitor around 0.5million+ public, high-alpha sources.
